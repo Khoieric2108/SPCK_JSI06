@@ -1,0 +1,110 @@
+/* style/edit-profile.css */
+
+/* Các style chung từ common.css và indexhome.css sẽ được áp dụng tự động */
+
+.edit-profile-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(
+    100vh - 150px
+  ); /* Đảm bảo form ở giữa màn hình, trừ đi chiều cao header/footer */
+  padding: 30px 0;
+}
+
+.edit-profile-card {
+  background-color: var(--secondary-bg); /* Nền card */
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  width: 100%;
+  max-width: 550px; /* Chiều rộng tối đa của form */
+  box-sizing: border-box;
+}
+
+.edit-profile-card h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-family: "Kanit", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.form-control {
+  /* Style cho input của Bootstrap */
+  background-color: #2d2d2d;
+  border: 1px solid #444444;
+  color: #ffffff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #2d2d2d; /* Giữ màu nền khi focus */
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+  color: #ffffff;
+}
+
+.form-control::placeholder {
+  color: #888888;
+}
+
+.form-control:disabled {
+  background-color: #1a1a1a; /* Màu nền khi bị disabled */
+  color: var(--text-muted);
+  border-color: #3a3a3a;
+  opacity: 0.7;
+}
+
+.form-text {
+  font-size: 0.85em;
+  color: var(--text-muted) !important; /* Đảm bảo màu text-muted */
+  margin-top: 5px;
+  display: block;
+}
+
+.btn-save-profile,
+.btn-cancel-edit {
+  font-size: 1.1em;
+  padding: 12px 25px;
+  min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edit-profile-card {
+    padding: 30px;
+    margin: 20px;
+  }
+  .edit-profile-card h2 {
+    font-size: 2em;
+  }
+  .btn-save-profile,
+  .btn-cancel-edit {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .edit-profile-card {
+    padding: 20px;
+  }
+  .edit-profile-card h2 {
+    font-size: 1.8em;
+  }
+}

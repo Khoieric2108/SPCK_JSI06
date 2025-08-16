@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập - [Tên Ứng dụng/Dịch vụ của bạn]</title>
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="stylesheet" href="./style/signup.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo">
+        <img id="logo-card" src="./img/logo(3).png" alt="" />
+      </div>
+      <div class="form-card">
+        <h2>Đăng Nhập</h2>
+        <p class="subtitle">Chào mừng bạn trở lại!</p>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email">Tên người dùng hoặc Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Nhập email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Nhập mật khẩu của bạn"
+              required
+            />
+          </div>
+
+          <div class="form-options login-options">
+            <label>
+              <input type="checkbox" name="remember_me" />
+              Ghi nhớ đăng nhập
+            </label>
+            <a href="#" class="link-text forgot-password">Quên mật khẩu?</a>
+          </div>
+
+          <button type="submit" class="btn-login">Đăng Nhập</button>
+
+          <div class="social-login">
+            <p>- HOẶC Đăng nhập bằng -</p>
+            <div class="social-buttons">
+              <button type="button" class="btn-social google">Google</button>
+              <button type="button" class="btn-social facebook">
+                Facebook
+              </button>
+            </div>
+          </div>
+
+          <p class="register-link">
+            Chưa có tài khoản?
+            <a href="./signup.html" class="link-text">Đăng ký ngay</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="java/login.js"></script>
+  </body>
+</html>

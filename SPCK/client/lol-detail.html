@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant</title>
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/indexhome.css" />
+    <link rel="stylesheet" href="./style/game-detail.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Oswald:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body style="background-color: #0a0a0a">
+    <nav class="navbar navbar-expand-lg game-navbar" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/logo_newsize.png"
+            alt="GamePedia Logo"
+            width="60"
+            height="60"
+            class="me-2"
+          />
+          <span class="logo-text">GamePedia</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tìm kiếm</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thể Loại
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Game Bắn Súng </a></li>
+                <li><a class="dropdown-item" href="#">Game Chiến Lược </a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Game Phiêu Lưu </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đánh giá</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Yêu Thích</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5 game-detail-main">
+      <div class="row">
+        <div class="col-lg-4 col-md-5 mb-4">
+          <div class="game-cover-card game-card">
+            <img
+              id="game-cover-img"
+              src="./img/valorant-detail.jpg"
+              alt="Ảnh bìa game"
+              class="img-fluid rounded"
+            />
+            <div class="game-card-body text-center">
+              <h5 id="game-title-sidebar" class="game-card-title">Valorant</h5>
+              <p class="game-card-meta">
+                Phát hành: <span id="game-release-date">02/06/2020</span>
+              </p>
+              <p class="game-card-meta">
+                Thể loại: <span id="game-genres">RPG, Action, Open World</span>
+              </p>
+              <p class="game-card-meta">
+                Nền tảng:
+                <span id="game-platforms"
+                  >PC (Windows), PlayStation 5, và Xbox Series X/S</span
+                >
+              </p>
+              <div class="mt-3">
+                <button class="btn btn-outline-info w-100">
+                  <i class="fas fa-heart me-2"></i>Thêm vào yêu thích
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-7">
+          <div class="game-detail-content game-card">
+            <h1 id="game-title-main">Valorant</h1>
+            <p class="game-rating">
+              <i class="fas fa-star text-warning"></i> 4.5/5
+            </p>
+            <h3 class="section-subtitle">Giới thiệu</h3>
+            <p id="game-description" class="game-text-block">
+              Valorant là tựa game bắn súng góc nhìn thứ nhất (FPS) chiến thuật
+              miễn phí được phát triển và phát hành bởi Riot Games, cha đẻ của
+              Liên Minh Huyền Thoại (League of Legends) đình đám. Ra mắt vào năm
+              2020, Valorant nhanh chóng trở thành một hiện tượng toàn cầu và là
+              đối thủ đáng gờm trong thể loại FPS trên đấu trường eSports.
+            </p>
+
+            <h3 class="section-subtitle">Trailer</h3>
+            <div class="video-container">
+              <iframe
+                id="game-trailer"
+                src="https://www.youtube.com/watch?v=wO87uYi_j1E"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+
+            <h3 class="section-subtitle">Đánh giá & Bình luận</h3>
+            <div id="game-reviews">
+              <div class="review-item">
+                <p class="review-author">
+                  **Người dùng A** -
+                  <span class="review-rating"
+                    >5/5 <i class="fas fa-star text-warning"></i
+                  ></span>
+                </p>
+                <p class="review-text">
+                  "Một tựa game thú vị, phong cách mạnh mẽ . Rất đáng chơi!"
+                </p>
+              </div>
+              <div class="review-item">
+                <p class="review-author">
+                  **Người dùng B** -
+                  <span class="review-rating"
+                    >4/5 <i class="fas fa-star text-warning"></i
+                  ></span>
+                </p>
+                <p class="review-text">
+                  "Có vài lỗi nhỏ lúc ra mắt nhưng giờ đã được cải thiện rất
+                  nhiều. Rất hay!"
+                </p>
+              </div>
+              <!-- Các bình luận khác sẽ được thêm vào đây -->
+            </div>
+            <button class="btn btn-outline-info mt-3">
+              Xem tất cả đánh giá
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phần game liên quan (tùy chọn) -->
+      <h2 class="section-title text-center mb-4 mt-5">Game Liên Quan</h2>
+      <div
+        id="related-games-container"
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+      >
+        <!-- Các game liên quan sẽ được thêm vào đây bằng JavaScript -->
+        <div class="col">
+          <div class="game-card">
+            <img
+              src="https://via.placeholder.com/300x180?text=Related+Game+1"
+              alt="Related Game 1"
+              class="game-card-img"
+            />
+            <div class="game-card-body">
+              <h5 class="game-card-title">Tên Game Liên Quan 1</h5>
+              <p class="game-card-meta">Thể loại: RPG | Nền tảng: PC</p>
+              <button class="btn btn-sm btn-outline-info view-details-btn">
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (Giữ nguyên từ trang chủ) -->
+    <footer class="game-footer py-4 mt-5">
+      <div class="container text-center">
+        <p>&copy; 2025 GamePedia. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (đặt cuối body để tải nhanh hơn) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JavaScript của bạn (để tải dữ liệu game từ API) -->
+    <script type="module" src="./java/game-detail.js"></script>
+  </body>
+</html>

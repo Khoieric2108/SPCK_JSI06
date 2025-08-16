@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký - [Tên Ứng dụng/Dịch vụ của bạn]</title>
+    <link rel="stylesheet" href="./style/signup.css " />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="registration-container">
+      <div class="logo">
+        <img id="logo-card" src="./img/logo(3).png" alt="" />
+      </div>
+      <div class="form-card">
+        <h2>Tạo Tài Khoản Mới</h2>
+        <p class="subtitle">Tham gia cộng đồng của chúng tôi ngay hôm nay!</p>
+
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="username">Tên người dùng</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Nhập tên người dùng của bạn"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Nhập địa chỉ email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Tối thiểu 8 ký tự"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm_password">Xác nhận mật khẩu</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Nhập lại mật khẩu"
+              required
+            />
+          </div>
+
+          <div class="form-options">
+            <label>
+              <input type="checkbox" name="terms" required />
+              Tôi đồng ý với
+              <a href="#" class="link-text">Điều khoản dịch vụ</a> và
+              <a href="#" class="link-text">Chính sách bảo mật</a>
+            </label>
+          </div>
+
+          <button type="button" id="submit" class="btn-register">Đăng Ký Ngay</button>
+
+          <div class="social-login">
+            <p>- HOẶC Đăng ký bằng -</p>
+            <div class="social-buttons">
+              <button type="button" class="btn-social google">Google</button>
+              <button type="button" class="btn-social facebook">
+                Facebook
+              </button>
+            </div>
+          </div>
+
+          <p class="login-link">
+            Đã có tài khoản? <a href="#" class="link-text">Đăng nhập</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./java/signup.js"></script>
+  </body>
+</html>

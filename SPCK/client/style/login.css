@@ -1,0 +1,55 @@
+#logo-card {
+  width: 200px;
+  height: 200px;
+}
+.login-container {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-out;
+}
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background-color: #007aff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 0.85em;
+}
+
+.login-options label {
+  margin-bottom: 0;
+}
+
+.register-link {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #b0b0b0;
+}

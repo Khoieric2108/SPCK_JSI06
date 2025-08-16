@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GamePedia - Tìm kiếm thông tin Game</title>
+    <link rel="stylesheet" href="./style/indexhome.css" />
+    <link rel="stylesheet" href="./style/common.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Oswald:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body style="background-color: #0a0a0a">
+    <nav class="navbar navbar-expand-lg game-navbar" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./img/logo_real.png"
+            alt="GamePedia Logo"
+            width="60"
+            height="60"
+            class="me-2"
+          />
+          <span class="logo-text">GamePedia</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Trang Chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tìm kiếm</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thể Loại
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./typeGame.html"
+                    >Game Bắn Súng</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./boardgame.html"
+                    >Game Chiến Lược</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Game Phiêu Lưu</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đánh giá</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Yêu Thích</a>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link btn-login-signup"
+                id="signup-button"
+              >
+                Đăng Kí
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Khám Phá Thế Giới Game</h1>
+        <p>Tìm kiếm thông tin, đánh giá và trailer của hàng ngàn tựa game.</p>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="game-search-input"
+            placeholder="Tìm kiếm game (ví dụ: Cyberpunk 2077, The Witcher)..."
+          />
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mt-5">
+      <div id="search-results"></div>
+    </div>
+
+    <main class="container my-5">
+      <h2 class="section-title text-center mb-4">Game Phổ Biến</h2>
+      <div
+        id="popular-games-container"
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+      >
+        <div class="col">
+          <div class="game-card">
+            <img
+              src="./img/valorant.webp"
+              alt="Placeholder Game"
+              class="game-card-img"
+            />
+            <div class="game-card-body">
+              <h5 class="game-card-title">Valorant</h5>
+              <p class="game-card-meta">
+                Thể loại: FPS | Nền tảng: PC, PS5, Android, IOS
+              </p>
+              <button
+                class="btn btn-sm btn-outline-info view-details-btn"
+                id="view-valorant"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="game-card">
+            <img
+              src="./img/pubg.webp"
+              alt="Placeholder Game"
+              class="game-card-img"
+            />
+            <div class="game-card-body">
+              <h5 class="game-card-title">PUBG</h5>
+              <p class="game-card-meta">
+                Thể loại: Battle Royale| Nền tảng: PC, Android, IOS, ...
+              </p>
+              <button
+                class="btn btn-sm btn-outline-info view-details-btn"
+                id="view-pubg"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="game-card">
+            <img
+              src="./img/lol.jpg"
+              alt="Placeholder Game"
+              class="game-card-img"
+            />
+            <div class="game-card-body">
+              <h5 class="game-card-title">League of Legends</h5>
+              <p class="game-card-meta">
+                Thể loại: MOBA | Nền tảng: PC, IOS, Android
+              </p>
+              <button
+                class="btn btn-sm btn-outline-info view-details-btn"
+                id="view-lol"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="section-title text-center mb-4 mt-5">
+        Thông Tin Cá Nhân Của Bạn
+      </h2>
+      <div class="user-info-card my-4">
+        <h3>Hồ Sơ Người Dùng</h3>
+        <div class="info-item">
+          <span class="info-label">Tên người dùng:</span>
+          <span id="username-span">Không dữ liệu</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Email:</span>
+          <span id="email-span">Không dữ liệu</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Ngày tham gia:</span>
+          <span id="date-span">Không dữ liệu</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Vai trò:</span>
+          <span id="role-span">Không dữ liệu</span>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-primary btn-edit-profile" id="edit">
+            Chỉnh sửa hồ sơ
+          </button>
+          <button class="btn btn-outline-danger btn-logout" id="logout">
+            Đăng xuất
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="game-footer py-4 mt-5">
+      <div class="container text-center">
+        <p>&copy; 2025 GamePedia. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./java/home.js"></script>
+  </body>
+</html>
