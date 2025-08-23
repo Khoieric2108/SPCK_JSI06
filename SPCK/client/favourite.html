@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GamePedia - Game Yêu Thích</title>
+    <link rel="stylesheet" href="./style/indexhome.css" />
+    <link rel="stylesheet" href="./style/common.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/favourite.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Oswald:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body style="background-color: #0a0a0a">
+    <nav class="navbar navbar-expand-lg game-navbar" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./img/logo_real.png"
+            alt="GamePedia Logo"
+            width="60"
+            height="60"
+            class="me-2"
+          />
+          <span class="logo-text">GamePedia</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tìm kiếm</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thể Loại
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./typeGame.html"
+                    >Game Bắn Súng</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./boardgame.html"
+                    >Game Chiến Lược</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./feedback.html">Đánh giá</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./favorite.html"
+                >Yêu Thích</a
+              >
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link btn-login-signup"
+                id="signup-button"
+              >
+                Đăng Kí
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section text-center">
+      <div class="hero-content">
+        <h1>Danh Sách Game Yêu Thích</h1>
+        <p>Quản lý các tựa game bạn đã thêm vào danh sách yêu thích.</p>
+      </div>
+    </section>
+
+    <main class="container my-5">
+      <h2 class="section-title text-center mb-4">Các tựa game đã lưu</h2>
+      <div
+        id="favorite-games-container"
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+      ></div>
+      <div class="text-center mt-5" id="no-favorites-message">
+        <p class="text-muted">
+          Chưa có game nào trong danh sách yêu thích của bạn.
+        </p>
+        <p class="text-muted">
+          Hãy quay lại
+          <a href="index.html" class="text-decoration-none">trang chủ</a> và tìm
+          kiếm các tựa game bạn yêu thích!
+        </p>
+      </div>
+    </main>
+
+    <footer class="game-footer py-4 mt-5">
+      <div class="container text-center">
+        <p>&copy; 2025 GamePedia. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
