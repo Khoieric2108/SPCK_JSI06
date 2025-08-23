@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gửi đánh giá</title>
+    <link rel="stylesheet" href="./style/feedback.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gửi đánh giá của bạn</h1>
+      <p style="text-align: center">
+        Chúng tôi rất muốn nghe những cảm nhận của bạn về trang web game!
+      </p>
+
+      <form action="#" method="post">
+        <h2>Mức độ hài lòng của bạn?</h2>
+        <div class="rating-section">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+
+        <label for="review-title">Tiêu đề đánh giá:</label>
+        <input type="text" id="review-title" name="review-title" required />
+
+        <label for="review-body">Nội dung chi tiết:</label>
+        <textarea
+          id="review-body"
+          name="review-body"
+          rows="6"
+          placeholder="Hãy cho chúng tôi biết trải nghiệm của bạn, bạn thích gì và chúng tôi có thể cải thiện điều gì..."
+          required
+        ></textarea>
+
+        <label for="name">Tên (không bắt buộc):</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="email">Email (không bắt buộc):</label>
+        <input type="email" id="email" name="email" />
+
+        <button type="submit" id="submit">Gửi đánh giá</button>
+      </form>
+
+      <a href="./index.html" class="back-button">Quay lại</a>
+      <div class="footer">
+        <p>
+          Cảm ơn bạn đã dành thời gian! Đánh giá của bạn giúp chúng tôi tạo ra
+          một trải nghiệm tốt hơn cho cộng đồng game thủ.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".rating-section span");
+        let ratingValue = 0;
+
+        stars.forEach((star) => {
+          star.addEventListener("click", function () {
+            ratingValue = this.getAttribute("data-value");
+            stars.forEach((s) => s.classList.remove("selected"));
+            for (let i = 0; i < ratingValue; i++) {
+              stars
+                .slice(0, ratingValue)
+                .forEach((s) => s.classList.add("selected"));
+            }
+          });
+        });
+      });
+      const subbutton = document.querySelector("#submit");
+      subbutton.addEventListener("click", function () {
+        alert("Cảm ơn bạn đã gửi đánh giá");
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
