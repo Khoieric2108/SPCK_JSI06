@@ -1,3 +1,19 @@
+import {
+  getAuth,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  arrayUnion,
+  updateDoc,
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { db } from "./firebase-config";
 const viewValo = document.querySelector("#view-valorant");
 const viewPubg = document.querySelector("#view-pubg");
 const viewLol = document.querySelector("#view-lol");
@@ -159,5 +175,11 @@ function hideSearchResults() {
 }
 const gameid = document.querySelector("#like");
 if (gameid) {
-  alert("Bạn đã thêm game vào danh sách yêu thích");
+  if (getUserFromLocalStorage) {
+    const docRef = await addDoc(collection(db, "game-like-id"));
+    alert("Bạn đã thêm game vào danh sách yêu thích");
+  } else {
+    alert("Hãy đăng nhập để trải nghiệm ứng dụng");
+    window.location.href = "login.html";
+  }
 }
